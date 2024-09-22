@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website Slideshow</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(145deg, #ffc1cc, #ffb6c1); /* Soft pink gradient */
+            color: #333; /* Darker text color for contrast */
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        .slides {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 182, 193, 0.8); /* Soft pink transparent background */
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            margin: 20px;
+        }
+
+        h2 {
+            color: #ff6f91; /* Darker soft pink */
+            text-shadow: 1px 1px 5px #ffe4e6; /* Light pink glow */
+        }
+
+        p, ul {
+            color: #4b4b4b; /* Darker gray for easy readability */
+            font-size: 18px;
+        }
+
+        img {
+            width: 345px;
+            height: 472px;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for images */
+        }
+
+        button {
+            background-color: #ff91a4; /* Soft pink */
+            color: white;
+            padding: 12px 25px;
+            border: 2px solid #ffb6c1; /* Lighter pink border */
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            position: relative; /* For click effect */
+        }
+
+        button:hover {
+            background-color: #ffb6c1; /* Lighter pink hover */
+            color: #333; /* Darker text on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        button:active {
+            transform: translateY(2px); /* Click effect */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            background-color: rgba(255, 182, 193, 0.5);
+            border-radius: 3px;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 182, 193, 0.8);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff91a4; /* Slightly darker footer */
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slideshow-container">
+
+        <!-- Opening Slide -->
+        <div class="slides">
+            <h2>Halo teman-teman!</h2>
+            <p>Perkenalkan nama aku <strong>Nathasya Cornelia Nur'iman</strong>, aku ingin menunjukkan data diriku.</p>
+            <button onclick="changeSlide(1)">Ketuk untuk membuka</button>
+        </div>
+
+        <!-- Identitas Main Slide -->
+        <div class="slides">
+            <h2>Identitas</h2>
+            <img src="C:\Users\user\Desktop\foto tasya\Identitas.jpeg" alt="Identitas">
+            <p>Klik ke kanan untuk melihat data diri lebih detail.</p>
+            <button onclick="changeSlide(1)">Lanjut ke Nama</button>
+        </div>
+
+        <!-- Identitas - Nama Slide -->
+        <div class="slides">
+            <h2>Nama</h2>
+            <p><strong>Nathasya Cornelia Nur'iman</strong><p>
+            <button onclick="changeSlide(1)">Lanjut ke Tempat, Tanggal Lahir</button>
+        </div>
+
+        <!-- Identitas - Tempat, Tanggal Lahir Slide -->
+        <div class="slides">
+            <h2>Tempat, Tanggal Lahir</h2>
+            <p>Cimahi, 15 November 2006</p>
+            <button onclick="changeSlide(1)">Lanjut ke Alamat</button>
+        </div>
+
+        <!-- Identitas - Alamat Slide -->
+        <div class="slides">
+            <h2>Alamat</h2>
+            <p>Kp.setu bintara jaya RT001/RW001 no 31. Bekasi barat, kota bekasi</p>
+            <button onclick="changeSlide(1)">Lanjut ke Agama</button>
+        </div>
+
+        <!-- Identitas - Agama Slide -->
+        <div class="slides">
+            <h2>Agama</h2>
+            <p>Islam</p>
+            <button onclick="changeSlide(1)">Lanjut ke Pendidikan</button>
+        </div>
+
+        <!-- Pendidikan Main Slide -->
+        <div class="slides">
+            <h2>Pendidikan</h2>
+            <p>Klik untuk melihat lebih lanjut.</p>
+            <button onclick="changeSlide(1)">Lanjut ke TK</button>
+        </div>
+
+        <!-- TK Slide -->
+        <div class="slides">
+            <h2>TK Santa Lusia</h2>
+            <img src="C:\Users\user\Desktop\foto tasya\Tk.jpeg" alt="TK Photo">
+            <p>Ini dia foto waktu aku masih tk, tk ku di TK santa lusia tepatnya di bandung. foto ini adalah foto dimna aku yang sangat bahagia karena                         masih memiliki keluarga yang lengkap, masih sama², sama mamah, papah,kakak laki-lakiku. tapi semenjak mamah meninggal keluarga kami jadi pisah dan tidak                bersama sama lagi.</p>
+            <button onclick="changeSlide(1)">Lanjut ke SD</button>
+        </div>
+
+        <!-- SD Slide -->
+        <div class="slides">
+            <h2>SDN Bintara Jaya 2</h2>
+            <img src="C:\Users\user\Desktop\foto tasya\SD.jpeg" alt="SD Photo">
+            <p>Dan ini adalah foto ku masa sd, sd ku di SDN Bintara jaya 2 di bekasi tepatnya di daerah bintara. ya di sd aku mempunyai banyak teman-teman yang                     baik.</p>
+            <button onclick="changeSlide(1)">Lanjut ke SMP</button>
+        </div>
+
+        <!-- SMP Slide -->
+        <div class="slides">
+            <h2>MTS Al Mukhtariyah</h2>
+            <img src="C:\Users\user\Desktop\foto tasya\SMP.jpeg" alt="SMP Photo">
+            <p>Ini fotoku masa smp, smp di di MTS Al Mukhtariyah masi di daerah yg sama yaitu di Bekasi bintara jaya. seperti di foto ini adalah teman-temanku yang                 sangat periang dan baik. mereka tidak pernah memilih-milih teman.</p>
+            <button onclick="changeSlide(1)">Lanjut ke SMK</button>
+        </div>
+
+        <!-- SMK Slide -->
+        <div class="slides">
+            <h2>SMKN 1 Kota Bekasi</h2>
+            <img src="C:\Users\user\Desktop\foto tasya\SMK.jpeg" alt="SMK Photo">
+            <p>Ini foto Smk ku. smk ku di SMKN 1 KOTA BEKASI. ya tempat sekarang aku sekolah, ini dia foto temanku yang sangat baik, di smk aku menempati kelas 10 di               jurusan PPLG. ayahku menginginkan ku menjadi penerusnya yaitu bekerja di bidang IT. jujur rada pusing untuk menghafal kode" mengoding tapi insyaallah aku             bisa membuat papahku bangga, doain aku ya guyss</p>
+            <button onclick="changeSlide(1)">Lanjut ke Hobi</button>
+        </div>
+
+        <!-- Hobi Slide -->
+        <div class="slides">
+            <h2>Hobi</h2>
+            <img src="C:\Users\user\Desktop\foto tasya\lombamenyanyi.jpeg" alt="Hobi Photo">
+            <ul>
+                <li>Mendengarkan Musik</li>
+                <li>Menyanyi</li>
+            </ul>
+            <button onclick="changeSlide(1)">Lanjut ke Buah Kesukaan</button>
+        </div>
+
+        <!-- Buah Kesukaan Slide -->
+        <div class="slides">
+            <h2>Buah Kesukaan</h2>
+            <img src="C:\Users\user\Desktop\foto tasya\Durian.jpeg" alt="Buah Kesukaan Photo">
+            <p>Durian</p>
+            <button onclick="changeSlide(1)">Ketuk untuk membuka</button>
+        </div>
+
+        <!-- Next and Previous Buttons -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Nathasya Cornelia Nur'iman Website</p>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            if (n >= slides.length) {
+                slideIndex = 0;
+            } 
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
